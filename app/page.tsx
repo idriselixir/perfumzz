@@ -6,6 +6,7 @@ import { ProductShowcase } from "@/components/sections/product-showcase";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { FAQSection } from "@/components/sections/faq-section";
 import { NewsletterSection } from "@/components/sections/newsletter-section";
+import { Footer } from "@/components/sections/footer-section";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TestimonialsSection />
       <FAQSection />
       <NewsletterSection />
+      <Footer />
     </main>
   );
 }
