@@ -31,7 +31,7 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 bg-neutral-50 dark:bg-neutral-900">
+    <section id="faq" className="py-20 bg-[#FAF7F5] dark:bg-neutral-900">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">
           Frequently Asked Questions
@@ -43,11 +43,11 @@ export function FAQSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="border border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden"
+              className="border border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden bg-white/50 dark:bg-neutral-800/50"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/80 dark:hover:bg-neutral-800"
               >
                 <span className="font-medium">{faq.question}</span>
                 <ChevronDown
@@ -63,7 +63,7 @@ export function FAQSection() {
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="px-6 py-4 bg-neutral-50 dark:bg-neutral-800"
+                    className="px-6 py-4 bg-white/30 dark:bg-neutral-800/30"
                   >
                     <p className="text-neutral-600 dark:text-neutral-300">
                       {faq.answer}
