@@ -27,8 +27,8 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="py-20 bg-white dark:bg-neutral-900">
-      <div className="container mx-auto px-4">
+    <section id="features" className="py-20 bg-[#FAF7F5] dark:bg-neutral-900">
+      <div id="features" className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-16">
           Why Choose Our Fragrances
         </h2>

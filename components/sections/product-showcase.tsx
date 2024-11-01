@@ -31,16 +31,37 @@ const products = [
     image:
       "https://images.unsplash.com/photo-1590736704728-f4730bb30770?q=80&w=2069",
   },
+  {
+    name: "Velvet Orchid",
+    description: "Luxurious blend of rare orchid and sweet vanilla.",
+    price: "$189.99",
+    rating: 4.7,
+    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=987",
+  },
+  {
+    name: "Cedar & Sage",
+    description: "Earthy cedar wood balanced with fresh sage notes.",
+    price: "$159.99",
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?q=80&w=987",
+  },
+  {
+    name: "Royal Oud",
+    description: "Premium oud wood infused with royal spices.",
+    price: "$299.99",
+    rating: 5.0,
+    image: "https://i.pinimg.com/236x/73/b3/78/73b3785704787f04971abe3a6edef1e0.jpg",
+  },
 ];
 
 export function ProductShowcase() {
   return (
-    <section className="py-20">
+    <section id="products" className="py-20 bg-[#FAF7F5] dark:bg-neutral-900">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-16">
           Featured Collections
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <motion.div
               key={product.name}
