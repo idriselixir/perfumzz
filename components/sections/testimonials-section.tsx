@@ -39,9 +39,10 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.2 }}
+              whileHover={{ y: -5 }}
               className="bg-white/50 dark:bg-neutral-800/50 p-6 rounded-lg shadow-lg"
             >
               <div className="flex items-center mb-4">

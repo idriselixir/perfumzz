@@ -40,9 +40,11 @@ export function FAQSection() {
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.01 }}
               className="border border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden bg-white/50 dark:bg-neutral-800/50"
             >
               <button

@@ -71,12 +71,18 @@ export function ProductShowcase() {
             >
               <Card className="overflow-hidden group">
                 <div className="relative h-[400px]">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <motion.div 
+                    className="relative h-[400px]"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.div>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
@@ -91,8 +97,26 @@ export function ProductShowcase() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-xl font-bold">{product.price}</span>
-                    <Button variant="outline" size="sm">
-                      Add to Cart
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="group"
+                    >
+                      <motion.span
+                        initial={{ x: 0 }}
+                        whileHover={{ x: -4 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        Add to Cart
+                      </motion.span>
+                      <motion.span
+                        initial={{ x: -10, opacity: 0 }}
+                        whileHover={{ x: 4, opacity: 1 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute"
+                      >
+                        →
+                      </motion.span>
                     </Button>
                   </div>
                 </div>
